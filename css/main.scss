@@ -1,0 +1,36 @@
+@import "../sass/abstracts/variables";
+@import "../sass/abstracts/mixins";
+@import "../sass/abstracts/extends";
+
+@import "../sass/base/resets";
+@import "../sass/base/typography";
+@import "../sass/base/utilities";
+
+@import "../sass/components/buttons";
+@import "../sass/components/cards";
+@import "../sass/components/forms";
+
+@import "../sass/layout/container";
+@import "../sass/layout/header";
+@import "../sass/layout/footer";
+@import "../sass/layout/navigation";
+
+@import "../sass/pages/home";
+
+@font-face {
+    font-family: "Muller-Light";
+    src: url("../font/Muller-Trial-Light.ttf");
+}
+@font-face {
+    font-family: "Muller-Regular";
+    src: url("../font/Muller-Trial-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Muller-Medium";
+    src: url("../font/Muller-Trial-Medium.ttf");
+}
+@font-face {
+    font-family: "Muller-Bold";
+    src: url("../font/Muller-Trial-Bold.ttf");
+}

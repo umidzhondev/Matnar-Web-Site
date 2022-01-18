@@ -1,0 +1,13 @@
+.arrivals__card--active {
+    .arrivals__card-overlay {
+        height: 100%;
+        width: 100%;
+        z-index: 11;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $bg-grey;
+        @include flex(center, center, row);
+        @include transition(all, .6s, ease-in-out);
+    }
+}

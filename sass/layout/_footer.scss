@@ -1,0 +1,33 @@
+.footer{
+    padding: 46px 0;
+    background-color: #e5e5e559;
+    &__content{
+        @include flex(center,flex-start,column);
+        width: 60%;
+        margin: 0 auto;
+    } 
+    &__form{
+        @include flex(center,center,row);
+    }
+    &__navigation{
+        @include flex(space-between,flex-start,row);
+        
+    }
+    &__footer{
+        width: 85%;
+        margin-right: auto;
+        @include flex(space-between,center,row);
+        &-language{
+            @include flex(space-between,center,row);
+            span{
+                margin-left: 8px;
+            }
+        }
+    }
+    &__year{
+        color: rgba($color: #000000, $alpha: .5);
+    }
+    &__phone{
+        color: rgba($color: #000000, $alpha: .5);
+    }
+}

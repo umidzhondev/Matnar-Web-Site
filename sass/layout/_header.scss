@@ -1,0 +1,59 @@
+.header {
+    background-color: $color-white;
+    width: 100%;
+    .navbar {
+        @include flex(space-between, center, row);
+        width: 100%;
+        padding: 34px 0;
+
+        &__nav {
+            @include flex(space-between, center, row);
+        }
+
+        &__language {
+            @include flex(space-between, center, row);
+
+            span {
+                margin-left: 8px;
+            }
+        }
+
+        &__logo {
+            @include flex(space-between, center, row);
+            z-index: 150;
+
+            h3 {
+                font-family: "Muller-Medium", sans-serif;
+                position: relative;
+                @include flex(center, center, row);
+                text-align: center;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 1.1px;
+                    background-color: #000;
+                    width: 40%;
+                    bottom: -2px;
+                    margin: 0 auto;
+                    font-weight: 300
+                }
+            }
+        }
+
+        &__icons {
+            @include flex(space-between, center, row);
+        }
+
+        &__icon {
+            @include flex(center, center, row);
+            width: 17px;
+            height: 17px;
+            margin-left: 32px;
+
+            &:first-child {
+                margin-right: 24px;
+            }
+        }
+    }
+}

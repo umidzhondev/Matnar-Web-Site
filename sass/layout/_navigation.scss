@@ -1,0 +1,87 @@
+.navbar__nav {
+    &-links {
+        @include flex(space-between, center, row);
+    }
+
+    &-item {
+        margin-left: 24px;
+        .sub__nav {
+            background-color: #fff;
+            border-radius: $border-radius-2;
+            position: absolute;
+            padding: 41px 0 31px 0;
+            z-index: 100;
+            transform: translate(-40px ,20px);
+            display: none;
+            transition: .6s ease-in-out;
+            ul {
+                @include flex(center, flex-start, column);
+                margin: 0 40px;
+                li{ 
+                    a{
+                        line-height: 28px;
+                        font-family: "Muller-Light",sans-serif;
+                        font-weight: 300;
+                        @include flex(center,center,row);
+                        font-size: 14px;
+                    }             
+                    &:first-child{  
+                          a{
+                                font-weight: 400;
+                                font-family: "Muller-Regular",sans-serif;
+                                position: relative;
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    height: 1.5px;
+                                    width: 100%;
+                                    background-color: $color-black;
+                                    bottom: 0;   
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .sub__nav{
+                @include flex(space-between, flex-start, row);
+            }
+        }
+    }
+
+    &-link {
+        font-weight: 300;
+        font-family: "Muller-Light", sans-serif;
+        z-index: 150;
+        &:hover{
+            &::after{
+                width: 100%;
+            }
+        }
+        @include flex(center,center,row);
+        position: relative;
+        &::after{
+            transition: .4s ease;
+            content: "";
+            position: absolute;
+            height: 1.5px;
+            width: 0%;
+            bottom: -2px;
+            background-color: $color-black;
+        }
+    }
+}
+
+.footer__navigation{
+    width: 100%;
+    margin-bottom: 40px;
+    &-links{
+        @include flex(center,flex-start,column);
+        flex: 1;        
+    }
+    &-link{
+        color: rgba(0,0,0,.5);
+        line-height: 33px;
+    }
+}

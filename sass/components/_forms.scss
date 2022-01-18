@@ -1,0 +1,24 @@
+.footer__form {
+    width: 100%;
+    margin-bottom: 38px;
+    input {
+        width: 100%;
+        font-size: 14px;
+        padding: 20px 0 20px 16px;
+        border: 1px solid $color-black;
+        background-color: transparent;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    button {
+        padding: 20px 4.7rem 20px 4.7rem;
+        border: 1px solid $color-black; 
+        background-color: $color-black;
+        color: $color-white;
+        &:hover{
+            border-radius: 0;
+        }
+    }
+}

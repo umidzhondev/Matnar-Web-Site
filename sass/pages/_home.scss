@@ -1,0 +1,127 @@
+// * Main section styles
+.main {
+    background-image: url("/image/home/header/header-main.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba($color: #000000, $alpha: .5);
+    background-blend-mode: color;
+    height: 75vh;
+    width: 100%;
+
+    .container {
+        height: 100%;
+        position: relative;
+    }
+
+    &__content {
+        @include flex(space-between, center, row);
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+
+        &-buttons {
+            @include flex(space-between, center, row);
+
+            button {
+                &:first-child {
+                    margin-right: 48px;
+                }
+            }
+        }
+    }
+}
+
+// * Banner section styles
+.banner {
+    background-color: #e5e5e54a;
+    padding: 52px 0 96px 0;
+
+    &__content {
+        @include flex(space-between, center, column);
+    }
+
+    &__box {
+        height: 450px;
+        background-color: $color-white;
+        @include flex(space-between, center, row);
+
+        &-info {
+            @include flex(center, center, column);
+            flex: 2;
+            padding: 0 65px;
+            text-align: center;
+
+            h2 {
+                line-height: 150%;
+                margin-bottom: 46px;
+            }
+        }
+
+        &-img {
+            flex: 4;
+            width: 100%;
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// * Brand section styles
+.brand {
+    padding: 66px 0 120px 0;
+    background-color: $color-white-3;
+
+    &__content {
+        @include flex(space-between, center, column);
+        width: 100%;
+
+        &-top {
+            @include flex(space-between, flex-start, row);
+            width: 100%;
+            margin-bottom: 55px;
+        }
+
+        &-icons {
+            @include flex(space-between, center, row);
+
+            img {
+                width: 52px;
+                height: 52px;
+
+                &:first-child {
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+}
+
+// * Arrivals section styles
+.arrivals {
+    padding: 40px 0 45px 0;
+    background-color: $color-white-3;
+
+    &__content {
+        @include flex(center, flex-start, column);
+
+        &-top {
+            @include flex(flex-start, flex-start, column);
+            margin-bottom: 46px;
+        }
+    }
+    &__title{
+        margin-bottom: 14px;
+    }
+    &__subtitle{
+        @include flex(space-between,center,row);
+        img{
+            margin-right: 16.5px;
+        }
+    }
+}
