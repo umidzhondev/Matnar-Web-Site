@@ -1,6 +1,9 @@
 .footer__form {
     width: 100%;
     margin-bottom: 38px;
+    @include responsive(md){
+        margin-bottom: 30px;
+    }
     input {
         width: 100%;
         font-size: 14px;
@@ -9,6 +12,12 @@
         background-color: transparent;
         &:focus{
             outline: none;
+        }
+        @include responsive(lg){
+         padding: 18px 0 18px 16px;   
+        }
+        @include responsive(md){
+            padding: 14px 0 14px 16px;
         }
     }
 
@@ -19,6 +28,15 @@
         color: $color-white;
         &:hover{
             border-radius: 0;
+        }
+        @include responsive(lg){
+         padding: 18px 4.2rem;   
+        }
+        @include responsive(md){
+            padding: 14px 3rem;
+        }
+        @include responsive(xs){
+            padding: 14px 1rem;
         }
     }
 }

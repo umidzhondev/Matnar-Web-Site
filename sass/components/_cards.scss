@@ -4,19 +4,36 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         width: 100%;
+        @include responsive(lg){
+         grid-gap: 20px;   
+        }
+        @include responsive(md){
+            grid-template-columns: repeat(4,1fr);
+        }
+        @include responsive(sm){
+            grid-gap: 10px;
+            grid-template-columns: repeat(3,1fr);
+        }
+        @include responsive(xxs){
+            grid-template-columns: repeat(2,1fr);
+        }
+        
+        
     }
-
+    
     &__card {
         &:first-child {
             background-color: $color-white-4;
         }
-
         width: 100%;
         background-color: $color-white-3;
         height: 200px;
         text-align: center;
         @include flex(center, center, row);
-
+        
+        @include responsive(xxxs){
+            height: 170px;
+        }
     }
 }
 
@@ -24,6 +41,9 @@
 .arrivals {
     &__cards {
         @include flex(center, center, row);
+        @include responsive(sm){
+            flex-wrap: wrap;
+        }
     }
 
     &__card {
@@ -32,6 +52,22 @@
         height: 400px;
         padding: 20px;
         overflow: hidden;
+        @include responsive(lg){
+         height: 380px;   
+        }
+        @include responsive(md){
+            height: 320px;
+        }
+        @include responsive(sm){
+            flex: 1 1 50%;
+            padding: 10px;
+            &:nth-child(2){
+                order: 2;
+            }
+        }
+        @include responsive(xs){
+            flex: 1 1 100%;
+        }
 
 
         &-imgbox {

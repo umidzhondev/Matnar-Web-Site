@@ -6,6 +6,12 @@ body {
 h1 {
     font-size: 3rem ;
     line-height: 48px;
+    @include responsive(xxs){
+        font-size: 2.5rem;
+    }
+    @include responsive(ss){
+        font-size: 2.2rem;
+    }
 }
 h1,h2,h3{
     font-weight: 500;
@@ -13,10 +19,22 @@ h1,h2,h3{
 h2{
     font-size: 2.25rem;
     line-height: 36px;
+    @include responsive(sm){
+          font-size: 2rem;
+    }
+    @include responsive(xs){
+          font-size: 1.8rem;
+    }
 }
 h3 {
     font-size: 1.5rem ;
     line-height: 24px;
+    @include responsive(lg){
+     font-size: 1.4rem;       
+    }
+    @include responsive(xxxs){
+          font-size: 1.2rem;
+    }
 }
 
 h4 {
@@ -27,6 +45,9 @@ h4 {
 button {
     font-size: 1.12rem ;
     line-height: 18px;
+    @include responsive(xs){
+     font-size: 1rem;     
+    }
 }
 
 p,

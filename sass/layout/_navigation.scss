@@ -1,50 +1,68 @@
 .navbar__nav {
     &-links {
         @include flex(space-between, center, row);
+
+        @include responsive(sm) {
+            display: none
+        }
     }
 
     &-item {
         margin-left: 24px;
+
+        @include responsive(lg) {
+            margin-left: 20px;
+        }
+
         .sub__nav {
             background-color: #fff;
             border-radius: $border-radius-2;
             position: absolute;
             padding: 41px 0 31px 0;
             z-index: 100;
-            transform: translate(-40px ,20px);
+            transform: translate(-40px, 20px);
             display: none;
             transition: .6s ease-in-out;
+
+            @include responsive(md) {
+                display: none !important;
+            }
+
             ul {
                 @include flex(center, flex-start, column);
                 margin: 0 40px;
-                li{ 
-                    a{
+
+                li {
+                    a {
                         line-height: 28px;
-                        font-family: "Muller-Light",sans-serif;
+                        font-family: "Muller-Light", sans-serif;
                         font-weight: 300;
-                        @include flex(center,center,row);
+                        @include flex(center, center, row);
                         font-size: 14px;
-                    }             
-                    &:first-child{  
-                          a{
-                                font-weight: 400;
-                                font-family: "Muller-Regular",sans-serif;
-                                position: relative;
-                                &::after{
-                                    content: "";
-                                    position: absolute;
-                                    height: 1.5px;
-                                    width: 100%;
-                                    background-color: $color-black;
-                                    bottom: 0;   
-                                }
+                    }
+
+                    &:first-child {
+                        a {
+                            font-weight: 400;
+                            font-family: "Muller-Regular", sans-serif;
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                height: 1.5px;
+                                width: 100%;
+                                background-color: $color-black;
+                                bottom: 0;
+                            }
                         }
                     }
                 }
             }
         }
-        &:hover{
-            .sub__nav{
+
+        &:hover {
+            .sub__nav {
                 @include flex(space-between, flex-start, row);
             }
         }
@@ -54,14 +72,17 @@
         font-weight: 300;
         font-family: "Muller-Light", sans-serif;
         z-index: 150;
-        &:hover{
-            &::after{
+
+        &:hover {
+            &::after {
                 width: 100%;
             }
         }
-        @include flex(center,center,row);
+
+        @include flex(center, center, row);
         position: relative;
-        &::after{
+
+        &::after {
             transition: .4s ease;
             content: "";
             position: absolute;
@@ -73,15 +94,23 @@
     }
 }
 
-.footer__navigation{
+.footer__navigation {
     width: 100%;
     margin-bottom: 40px;
-    &-links{
-        @include flex(center,flex-start,column);
-        flex: 1;        
+    @include responsive(md){
+        margin-bottom: 0;
     }
-    &-link{
-        color: rgba(0,0,0,.5);
+
+    &-links {
+        @include flex(center, flex-start, column);
+        flex: 1;
+        @include responsive(md){
+            margin-bottom: 20px;
+        }
+    }
+
+    &-link {
+        color: rgba(0, 0, 0, .5);
         line-height: 33px;
     }
 }
