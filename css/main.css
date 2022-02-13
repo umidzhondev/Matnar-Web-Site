@@ -1260,6 +1260,7 @@ a {
   .banner__box {
     margin-bottom: 20px;
     height: auto;
+    padding-bottom: 20px;
   }
   .banner__box:first-child {
     -webkit-box-orient: vertical;
